@@ -1,4 +1,4 @@
-cp -rf .config/* ~/.config/*
+cp -rf .config/* ~/.config/
 cp -rf scripts ~/scripts
 
 cp .nanorc ~/.nanorc
