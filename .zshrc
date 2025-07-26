@@ -86,6 +86,7 @@ alias files="spf"
 alias lf="spf"
 alias ls='eza -a --icons'
 alias doughnut="python ~/scripts/doughnut.py"
+alias wifi="~/scripts/wifi.sh"
 eval $(thefuck --alias)
 
 fastfetch --config examples/13
