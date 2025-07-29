@@ -80,14 +80,18 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias bat="upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E 'state|to full|percentage'"
-alias sn="~/scripts/serialNumber.sh"
 alias fucking="sudo"
 alias files="spf"
 alias lf="spf"
 alias ls='eza -a --icons'
+alias year="cal -m -y"
+
+#scripts
+alias sn="~/scripts/serialNumber.sh"
 alias doughnut="python ~/scripts/doughnut.py"
 alias wifi="~/scripts/wifi.sh"
 alias vpn="~/scripts/vpn.sh"
+
 eval $(thefuck --alias)
 
 fastfetch --config examples/13
