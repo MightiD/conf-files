@@ -8,7 +8,7 @@ case $1 in
         nmcli -f SSID,SIGNAL,BARS,RATE,CHAN,SECURITY,BSSID device wifi list --rescan yes
         ;;
     delete)
-        nmcli connection delete $1
+        nmcli connection delete $2
         ;;
     *)
         nmcli device wifi connect $1 --ask
