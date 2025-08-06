@@ -85,6 +85,7 @@ alias files="spf"
 alias lf="spf"
 alias ls='eza -a --icons'
 alias year="cal -m -y"
+alias win="sudo grub-reboot Windows && reboot"
 
 #scripts
 alias sn="~/scripts/serialNumber.sh"
