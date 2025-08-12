@@ -93,6 +93,8 @@ alias doughnut="python ~/scripts/doughnut.py"
 alias wifi="~/scripts/wifi.sh"
 alias vpn="~/scripts/vpn.sh"
 
+files=/media/mightid/Files
+
 eval $(thefuck --alias)
 
 fastfetch --config examples/13
