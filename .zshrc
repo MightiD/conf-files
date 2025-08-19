@@ -86,12 +86,14 @@ alias lf="spf"
 alias ls='eza -a --icons'
 alias year="cal -m -y"
 alias win="sudo grub-reboot Windows && reboot"
+alias venv="python -m venv venv && source ./venv/bin/activate"
 
 #scripts
 alias sn="~/scripts/serialNumber.sh"
 alias doughnut="python ~/scripts/doughnut.py"
 alias wifi="~/scripts/wifi.sh"
 alias vpn="~/scripts/vpn.sh"
+alias get_esprs='. $HOME/export-esp.sh'
 
 files=/media/mightid/Files
 
