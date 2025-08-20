@@ -4,12 +4,14 @@ set_mono() {
 	easyeffects -l mono
 	echo mono > /tmp/audioMode
 	echo "Using mono audio"
+	notify-send "Using mono audio"
 }
 
 set_stereo() {
 	easyeffects -l stereo
 	echo stereo > /tmp/audioMode
 	echo "Using stereo audio"
+	notify-send "Using stereo audio"
 }
 
 mode=$(</tmp/audioMode)
