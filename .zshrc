@@ -93,6 +93,7 @@ alias sn="~/scripts/serialNumber.sh"
 alias doughnut="python ~/scripts/doughnut.py"
 alias wifi="~/scripts/wifi.sh"
 alias vpn="~/scripts/vpn.sh"
+alias audio="~/scripts/audioModes.sh"
 alias get_esprs='. $HOME/export-esp.sh'
 
 files=/media/mightid/Files
