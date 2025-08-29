@@ -13,12 +13,13 @@
         "hyprland/window"
     ],
     "modules-right": [
-        "custom/macro-kbd",
+//        "custom/macro-kbd",
+	"custom/music",
         "pulseaudio",
         "network",
-        "cpu",
-        "memory",
-        "temperature",
+//        "cpu",
+//        "memory",
+//        "temperature",
         "battery",
         "power-profiles-daemon",
         "clock"
@@ -116,5 +117,10 @@
         "format-icons": {
             "default": " "
         }
+    },
+    "custom/music": {
+	"format": "{}",
+	"return-type": "json",
+	"exec": "waybar-module-music --format \"%icon% %title% | %artist%\" --marquee --title-width 15 --effect-speed 100 --play-icon \"▶\" --pause-icon \"⏸\"",
     }
 }

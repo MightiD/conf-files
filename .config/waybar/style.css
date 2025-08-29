@@ -59,6 +59,7 @@ window#waybar.hidden {
 #clock,
 #custom-macro-kbd,
 #temperature,
+#custom-music,
 #tray {
   border-radius: 4px;
   margin: 6px 3px;
@@ -117,6 +118,10 @@ window#waybar.hidden {
 #clock {
   font-family: JetBrainsMono Nerd Font;
   background-color: #cba6f7;
+}
+
+#custom-music {
+  background-color: #75A3BA;
 }
 
 #power-profiles-daemon.default,
