@@ -102,3 +102,10 @@ eval $(thefuck --alias)
 
 export EDITOR=nvim
 export MAKEFLAGS="--jobs=10"
+
+# bun completions
+[ -s "/home/mightid/.bun/_bun" ] && source "/home/mightid/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
