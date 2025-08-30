@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Updating MineGRUB Theme
+When = PostTransaction
+Exec = /usr/bin/python3 /boot/grub/themes/minegrub/update_theme.py

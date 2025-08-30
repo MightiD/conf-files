@@ -2,7 +2,7 @@ import os
 
 pwd = os.getcwd()
 
-ignore = [".git", "setup.py", "setup.sh", "deps", "templates" "__packages.sh"]
+ignore = [".git", "setup.py", "setup.sh", "deps", "templates"]
 
 os.system("deps/__packages.sh")
 
@@ -22,11 +22,6 @@ def main():
             os.makedirs(os.path.dirname(homePath), exist_ok=True)
 
             os.system(f"ln -sf \"{absPath}\" \"{homePath}\"")
-    
-    for (root,dirs,files) in os.walk("./deps", topdown=True):
-        for file in files:
-            print(file)
-            os.system(f"./deps/{file}")
     
     os.system("~/.config/hypr/scripts/hyprland.conf.sh")
 
