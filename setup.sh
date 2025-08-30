@@ -27,7 +27,7 @@ cp "./background_options/1.18 - [Caves And Cliffs 2].png" ./minegrub/backgrounds
 
 sudo cp -ruv ./minegrub /boot/grub/themes/
 
-sudo echo "GRUB_THEME=/boot/grub/themes/minegrub/theme.txt" >> /etc/default/grub
+sudo echo "GRUB_THEME=/boot/grub/themes/minegrub/theme.txt" | sudo tee -a /etc/default/grub
 
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
