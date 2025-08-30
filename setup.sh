@@ -5,7 +5,7 @@ echo "INSTALLING NECESSARY PACKAGES"
 
 sudo pacman -Syy
 
-sudo pacman -S hyprland hypridle hyprlock hyprshot wf-recorder swww waybar kitty dolphin wofi flatpak swaync pkgconf openssl inetutils samba zsh-autosuggestions zsh-syntax-highlighting eza power-profiles-daemon python-pillow ttf-firacode-nerd
+sudo pacman -S hyprland hypridle hyprlock hyprshot wf-recorder swww waybar kitty dolphin wofi flatpak swaync pkgconf openssl inetutils samba zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete zsh-completions eza power-profiles-daemon python-pillow ttf-firacode-nerd
 
 flatpak install io.github.ungoogled_software.ungoogled_chromium
 
