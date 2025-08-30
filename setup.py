@@ -2,7 +2,9 @@ import os
 
 pwd = os.getcwd()
 
-ignore = [".git", "setup.py", "setup.sh", "deps"]
+ignore = [".git", "setup.py", "setup.sh", "deps", "templates" "__packages.sh"]
+
+os.system("python ./deps/__packages.sh")
 
 def main():
     for (root,dirs,files) in os.walk("./", topdown=True):
