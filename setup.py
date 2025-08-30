@@ -4,8 +4,6 @@ pwd = os.getcwd()
 
 ignore = [".git", "setup.py", "setup.sh", "deps", "templates"]
 
-os.system("deps/__packages.sh")
-
 def main():
     for (root,dirs,files) in os.walk("./", topdown=True):
         dirs[:] = [d for d in dirs if d not in ignore]
