@@ -121,6 +121,6 @@
     "custom/music": {
 	"format": "{}",
 	"return-type": "json",
-	"exec": "~/.local/bin/waybar-module-music --format \"%icon% %title% | %artist%\" --marquee -d 2000 --title-width 15 --effect-speed 175 --play-icon \"▶\" --pause-icon \"⏸\"",
+	"exec": "~/.local/bin/waybar-module-music --format \"%icon% %title% | %artist%\" --marquee -d 2000 --title-width 15 --artist-width 15 --effect-speed 175 --play-icon \"▶\" --pause-icon \"⏸\"",
     }
 }
