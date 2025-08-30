@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo BUILDING WAYBAR MUSIC MODULE
+
 git clone https://github.com/Andeskjerf/waybar-module-music.git
 cd waybar-module-music
 cargo build --release

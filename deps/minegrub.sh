@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo CONFIGURING GRUB THEME
+
 git clone https://github.com/Lxtharia/minegrub-theme.git
 
 cd minegrub-theme

@@ -1,6 +1,8 @@
 #!/bin/bash
 
-sudo pacman -S hyprland hypridle hyprlock hyprshot wf-recorder swww waybar kitty dolphin wofi flatpak swaync pkgconf openssl inetutils
+echo INSTALLING NECESSARY PACKAGES
+
+sudo pacman -S hyprland hypridle hyprlock hyprshot wf-recorder swww waybar kitty dolphin wofi flatpak swaync pkgconf openssl inetutils samba
 
 flatpak install io.github.ungoogled_software.ungoogled_chromium
 
