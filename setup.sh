@@ -53,6 +53,8 @@ git clone https://github.com/Andeskjerf/waybar-module-music.git
 cd waybar-module-music
 cargo build --release
 
+mkdir -p ~/.local/bin
+
 cp target/release/waybar-module-music ~/.local/bin/
 
 cd ..
