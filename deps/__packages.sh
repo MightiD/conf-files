@@ -2,7 +2,7 @@
 
 echo INSTALLING NECESSARY PACKAGES
 
-sudo pacman -S hyprland hypridle hyprlock hyprshot wf-recorder swww waybar kitty dolphin wofi flatpak swaync pkgconf openssl inetutils samba
+sudo pacman -S hyprland hypridle hyprlock hyprshot wf-recorder swww waybar kitty dolphin wofi flatpak swaync pkgconf openssl inetutils samba zsh-autosuggestions zsh-syntax-highlighting
 
 flatpak install io.github.ungoogled_software.ungoogled_chromium
 
