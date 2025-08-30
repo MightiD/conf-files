@@ -104,3 +104,5 @@ Include = /etc/pacman.d/mirrorlist
 #SigLevel = Optional TrustAll
 #Server = file:///home/custompkgs
 EOF
+
+sudo pacman -Syy
