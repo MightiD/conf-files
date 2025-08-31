@@ -5,10 +5,12 @@ If anyone accidentally stumbles upon this repo somehow
 ``` sh
 git clone http://github.com/mightid/conf-files.git
 cd conf-files
-python setup.py
+./setup.sh
 ```
 
-The script works by making sym links from the git repo to the target files in
+It installs the required packages, then copies over some conf files, clones some repos and sets them up ect..
+
+Then the script makes sym links from the git repo to the target files in
 ```
 ~/.config/
 ~/scripts/
