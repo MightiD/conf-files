@@ -14,6 +14,7 @@ flatpak install io.github.ungoogled_software.ungoogled_chromium
 curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 rustup update
 
+sudo systemctl enable sshd
 sudo systemctl start sshd
 
 export PATH="$HOME/.cargo/bin:$PATH"
