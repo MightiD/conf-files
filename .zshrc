@@ -24,6 +24,7 @@ alias ls='eza -a --icons'
 alias year="cal -m -y"
 alias win="sudo grub-reboot Windows && reboot"
 alias venv="python -m venv venv && source ./venv/bin/activate"
+alias ip="ip -c"
 
 #scripts
 alias sn="~/scripts/serialNumber.sh"
