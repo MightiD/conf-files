@@ -26,3 +26,5 @@ set showmode
 nnoremap <Space>e :Ex<CR>
 
 colorscheme evening 
+
+command! Vterm execute 'vsplit' | execute 'term' | wincmd j | execute 'q'
