@@ -14,7 +14,7 @@ vim.o.splitright = true
 vim.g.mapleader = " "
 
 vim.keymap.set("n", "<leader>e", ":Ex<CR>")
-vim.keymap.set("n", "<leader>p", '"+p`[ A')
+vim.keymap.set("n", "<leader>p", '"+p')
 vim.keymap.set("n", "<leader>c", '"+yy')
 vim.keymap.set("v", "<leader>c", '"+y')
 vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover)
@@ -27,6 +27,7 @@ vim.keymap.set("n", "<leader>tv", function()
     vim.cmd("vsplit | terminal")
     vim.cmd("startinsert")
 end)
+
 vim.keymap.set("n", "<leader>th", function()
     vim.cmd("split | terminal")
     vim.cmd("startinsert")
@@ -49,6 +50,7 @@ vim.pack.add({
     { src = "https://github.com/ThePrimeagen/harpoon",           version = "harpoon2" },
     { src = "https://github.com/mason-org/mason.nvim" },
     { src = "https://github.com/windwp/nvim-autopairs" },
+    { src = "https://github.com/neovim/nvim-lspconfig" },
 })
 
 require("nvim-autopairs").setup()
@@ -81,11 +83,5 @@ vim.lsp.config["luals"] = {
         }
     }
 }
-vim.lsp.config["rust_analyzer"] = {
-    cmd = { "rust_analyzer" },
-    filetypes = { "rs" },
-    root_markers = { "Cargo.toml", ".git" },
-}
 
-
-vim.lsp.enable({ "luals", "pywright", "rust-analyzer" })
+vim.lsp.enable({ "luals", "pywright", "rust_analyzer" })
