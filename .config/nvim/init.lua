@@ -8,6 +8,8 @@ vim.o.expandtab = true
 vim.o.softtabstop = 4
 vim.o.scrolloff = 10
 vim.o.winborder = "rounded"
+vim.o.splitbelow = true
+vim.o.splitright = true
 
 vim.g.mapleader = " "
 
@@ -18,6 +20,7 @@ vim.keymap.set("v", "<leader>c", '"+y')
 vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover)
 vim.keymap.set("n", "<leader>n", ":nohlsearch<CR>")
 vim.keymap.set("i", "<C-space>", "<C-x><C-o>")
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 vim.keymap.set("i", "<Tab>", "pumvisible() ? '<C-n>' : '<Tab>'", { noremap = true, expr = true })
 vim.keymap.set("i", "<S-Tab>", "pumvisible() ? '<C-p>' : '<S-Tab>'", { noremap = true, expr = true })
 vim.keymap.set("n", "<leader>tv", function()
