@@ -25,6 +25,7 @@ alias year="cal -m -y"
 alias win="sudo grub-reboot Windows && reboot"
 alias venv="python -m venv venv && source ./venv/bin/activate"
 alias ip="ip -c"
+alias vim="nvim"
 
 #scripts
 alias sn="~/scripts/serialNumber.sh"
