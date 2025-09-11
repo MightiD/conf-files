@@ -63,6 +63,13 @@ cp target/release/waybar-module-music ~/.local/bin/
 cd ..
 rm -rf waybar-module-music
 
+git clone https://github.com/mightid/hyprland-scrolling.git
+cd hyprland-scrolling
+cargo build --release
+cp target/release/hyprland-scrolling ~/.local/bin
+cd ..
+rm -rf hyprland-scrolling
+
 
 python setup.py
 
