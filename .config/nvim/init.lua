@@ -51,6 +51,7 @@ vim.pack.add({
     { src = "https://github.com/mason-org/mason.nvim" },
     { src = "https://github.com/windwp/nvim-autopairs" },
     { src = "https://github.com/neovim/nvim-lspconfig" },
+    { src = "https://github.com/henriklovhaug/Preview.nvim" },
 })
 
 require("nvim-autopairs").setup()
@@ -59,6 +60,8 @@ vim.cmd("colorscheme gruvbox-material")
 
 local harpoon = require("harpoon")
 harpoon:setup()
+
+local config = require("preview").setup()
 
 vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
 vim.keymap.set("n", "<leader>h", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
