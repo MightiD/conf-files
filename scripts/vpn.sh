@@ -1,9 +1,9 @@
 #!/bin/bash
 
-STATUS=$(nmcli -g GENERAL.STATE c s MiniArchMain) 
+STATUS=$(nmcli -g GENERAL.STATE c s MiniArchMain)
 
 if [ "$STATUS" != "activated" ]; then
-	nmcli connection up MiniArchMain
+	nmcli connection up mini-arch-ovpn
 else
-	nmcli connection down MiniArchMain
+	nmcli connection down mini-arch-ovpn
 fi
