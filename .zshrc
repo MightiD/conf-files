@@ -38,6 +38,10 @@ alias get_esprs='. $HOME/export-esp.sh'
 
 files=/media/mightid/Files
 
+open() {
+    nohup xdg-open "$@" > /dev/null 2>&1 &
+}
+
 eval $(thefuck --alias)
 
 export EDITOR=nvim
