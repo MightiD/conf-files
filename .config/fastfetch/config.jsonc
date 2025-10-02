@@ -1,0 +1,64 @@
+{
+  "logo": {
+    "source": "~/.config/fastfetch/cat",
+    "padding": {
+        "top": 3,
+        "left": 1,
+    },
+    "color": {
+        "1": "white"
+    }
+  },
+  "modules": [
+      {
+            "type": "os",
+            "key": " ",
+            //"keyColor": "38;2;152;255;152",  // = color4
+        },
+        {
+            "type": "kernel",
+            "key": " ",
+            //"keyColor": "38;2;152;255;152",
+        },
+        {
+            "type": "packages",
+            "key": " ",
+            //"keyColor": "38;2;152;255;152",  
+        },
+        {
+            "type": "shell",
+            "key": " ",
+            //"keyColor": "38;2;152;255;152", 
+        },
+        {
+            "type": "terminal",
+            "key": " ",
+            //"keyColor": "38;2;152;255;152", 
+        },
+        {
+            "type": "wm",
+            "key": " ",
+            //"keyColor": "38;2;152;255;152", 
+        },
+        {
+            "type": "uptime",
+            "key": " ",
+            //"keyColor": "38;2;152;255;152", 
+        },
+        {
+            "type": "CPU",
+            "key": "⚙ ",
+            //"keyColor": "38;2;152;255;152", 
+        },
+        {
+            "type": "GPU",
+            "key": " ",
+            //"keyColor": "38;2;152;255;152", 
+        },
+        {
+            "type": "memory",
+            "key": "󰍛 ",
+            //"keyColor": "38;2;152;255;152"
+        },
+    ]
+}
