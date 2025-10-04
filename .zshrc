@@ -26,6 +26,7 @@ alias win="sudo grub-reboot Windows && reboot"
 alias venv="python -m venv venv && source ./venv/bin/activate"
 alias ip="ip -c"
 alias vim="nvim"
+alias gary="curl -s https://api.garythe.cat/gary/image/ | kitty +kitten icat --scale-up=no"
 
 #scripts
 alias sn="~/scripts/serialNumber.sh"
