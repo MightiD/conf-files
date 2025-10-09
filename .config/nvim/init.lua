@@ -6,10 +6,13 @@ vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.softtabstop = 4
-vim.o.scrolloff = 10
+vim.o.scrolloff = 15
 vim.o.winborder = "rounded"
 vim.o.splitbelow = true
 vim.o.splitright = true
+vim.opt.smartcase = true
+vim.opt.laststatus = 2
+vim.opt.statusline = "%f %m %= %y %l/%L Col %c"
 
 vim.g.mapleader = " "
 
@@ -19,6 +22,7 @@ vim.keymap.set("n", "<leader>c", '"+yy')
 vim.keymap.set("v", "<leader>c", '"+y')
 vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover)
 vim.keymap.set("n", "<leader>n", ":nohlsearch<CR>")
+vim.keymap.set("n", "<leader>c", ":cd %:p:h<CR>")
 vim.keymap.set("i", "<C-space>", "<C-x><C-o>")
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 vim.keymap.set("i", "<Tab>", "pumvisible() ? '<C-n>' : '<Tab>'", { noremap = true, expr = true })
@@ -52,9 +56,11 @@ vim.pack.add({
     { src = "https://github.com/windwp/nvim-autopairs" },
     { src = "https://github.com/neovim/nvim-lspconfig" },
     { src = "https://github.com/henriklovhaug/Preview.nvim" },
+    { src = "https://github.com/numToStr/Comment.nvim" },
 })
 
 require("nvim-autopairs").setup()
+require("Comment").setup()
 
 vim.cmd("colorscheme gruvbox-material")
 
@@ -87,4 +93,4 @@ vim.lsp.config["luals"] = {
     }
 }
 
-vim.lsp.enable({ "luals", "pywright", "rust_analyzer" })
+vim.lsp.enable({ "luals", "pyright", "rust_analyzer", "typescript-language-server" })
