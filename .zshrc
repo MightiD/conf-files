@@ -17,6 +17,8 @@ source $ZSH/oh-my-zsh.sh
 export ARCHFLAGS="-arch $(uname -m)"
 export MAKEFLAGS="--jobs=$(nproc)"
 
+EDITOR=nvim
+
 alias fucking="sudo"
 alias files="spf"
 alias lf="spf"
