@@ -48,6 +48,7 @@ end
 vim.keymap.set("n", "<leader>i", formatCode)
 
 vim.pack.add({
+    { src = "https://github.com/shaunsingh/nord.nvim" },
     { src = "https://github.com/sainnhe/gruvbox-material" },
     { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
     { src = "https://github.com/nvim-lua/plenary.nvim" },
@@ -62,7 +63,7 @@ vim.pack.add({
 require("nvim-autopairs").setup()
 require("Comment").setup()
 
-vim.cmd("colorscheme gruvbox-material")
+vim.cmd("colorscheme nord")
 
 local harpoon = require("harpoon")
 harpoon:setup()
