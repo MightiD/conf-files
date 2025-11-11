@@ -11,7 +11,7 @@ vim.o.winborder = "rounded"
 vim.o.splitbelow = true
 vim.o.splitright = true
 vim.opt.smartcase = true
-vim.opt.ignorecase= true
+vim.opt.ignorecase = true
 vim.opt.laststatus = 2
 vim.opt.statusline = "%f %m %= %y %l/%L Col %c"
 
@@ -29,6 +29,11 @@ vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 vim.keymap.set("i", "<Tab>", "pumvisible() ? '<C-n>' : '<Tab>'", { noremap = true, expr = true })
 vim.keymap.set("i", "<S-Tab>", "pumvisible() ? '<C-p>' : '<S-Tab>'", { noremap = true, expr = true })
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+
+vim.keymap.set("n", "<C-h>", ":wincmd h<CR>")
+vim.keymap.set("n", "<C-j>", ":wincmd j<CR>")
+vim.keymap.set("n", "<C-k>", ":wincmd k<CR>")
+vim.keymap.set("n", "<C-l>", ":wincmd l<CR>")
 
 vim.keymap.set("n", "<leader>tv", function()
     vim.cmd("vsplit | terminal")
@@ -67,6 +72,10 @@ vim.pack.add({
 
 require("nvim-autopairs").setup()
 require("Comment").setup()
+
+require("catppuccin").setup({
+    transparent_background = true,
+})
 
 vim.cmd("colorscheme catppuccin-frappe")
 
