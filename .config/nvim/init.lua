@@ -11,6 +11,7 @@ vim.o.winborder = "rounded"
 vim.o.splitbelow = true
 vim.o.splitright = true
 vim.opt.smartcase = true
+vim.opt.ignorecase= true
 vim.opt.laststatus = 2
 vim.opt.statusline = "%f %m %= %y %l/%L Col %c"
 
@@ -27,6 +28,8 @@ vim.keymap.set("i", "<C-space>", "<C-x><C-o>")
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 vim.keymap.set("i", "<Tab>", "pumvisible() ? '<C-n>' : '<Tab>'", { noremap = true, expr = true })
 vim.keymap.set("i", "<S-Tab>", "pumvisible() ? '<C-p>' : '<S-Tab>'", { noremap = true, expr = true })
+vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+
 vim.keymap.set("n", "<leader>tv", function()
     vim.cmd("vsplit | terminal")
     vim.cmd("startinsert")
@@ -48,6 +51,7 @@ end
 vim.keymap.set("n", "<leader>i", formatCode)
 
 vim.pack.add({
+    { src = "https://github.com/catppuccin/nvim" },
     { src = "https://github.com/shaunsingh/nord.nvim" },
     { src = "https://github.com/sainnhe/gruvbox-material" },
     { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
@@ -58,12 +62,13 @@ vim.pack.add({
     { src = "https://github.com/neovim/nvim-lspconfig" },
     { src = "https://github.com/henriklovhaug/Preview.nvim" },
     { src = "https://github.com/numToStr/Comment.nvim" },
+    { src = "https://github.com/tpope/vim-fugitive" },
 })
 
 require("nvim-autopairs").setup()
 require("Comment").setup()
 
-vim.cmd("colorscheme nord")
+vim.cmd("colorscheme catppuccin-frappe")
 
 local harpoon = require("harpoon")
 harpoon:setup()
@@ -93,5 +98,13 @@ vim.lsp.config["luals"] = {
         }
     }
 }
+
+--vim.api.nvim_create_autocmd("VimEnter", {
+--    callback = function()
+--        if vim.fn.argc() == 0 then
+--            vim.cmd("Explore")
+--        end
+--    end,
+--})
 
 vim.lsp.enable({ "luals", "pyright", "rust_analyzer", "typescript-language-server" })
