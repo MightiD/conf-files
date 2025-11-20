@@ -7,6 +7,7 @@ ZSH_THEME="myTheme"
 zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 ENABLE_CORRECTION="true"
+setopt HIST_IGNORE_SPACE
 
 HIST_STAMPS="yyyy-mm-dd"
 
