@@ -46,6 +46,10 @@ open() {
     nohup xdg-open "$@" > /dev/null 2>&1 &
 }
 
+bgcmd() {
+    "$@" > /dev/null 2>&1 &
+}
+
 eval $(thefuck --alias)
 
 export EDITOR=nvim
