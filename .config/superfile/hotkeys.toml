@@ -2,14 +2,15 @@
 # Global hotkeys (cannot conflict with other hotkeys)
 confirm = ['enter']
 quit = ['q']
+cd_quit = ['Q', '']
 # movement
 list_up = ['up', 'k']
 list_down = ['down', 'j']
-page_up = ['pgup','']
-page_down = ['pgdown','']
+page_up = ['pgup', '']
+page_down = ['pgdown', '']
 # file panel control
-create_new_file_panel = ['t', '']
 close_file_panel = ['x', '']
+create_new_file_panel = ['t', '']
 next_file_panel = ['tab', 'L']
 previous_file_panel = ['shift+left', 'H']
 toggle_file_preview_panel = ['f', '']
@@ -19,14 +20,15 @@ toggle_reverse_sort = ['R', '']
 focus_on_process_bar = ['p', '']
 focus_on_sidebar = ['s', '']
 focus_on_metadata = ['m', '']
-# create file/directory and rename
+# create file/directory and rename 
 file_panel_item_create = ['d', '']
 file_panel_item_rename = ['r', '']
-# file operations
+# file operate
 copy_items = ['ctrl+c', '']
-cut_items = ['ctrl+x', '']
 paste_items = ['ctrl+v', '']
+cut_items = ['ctrl+x', '']
 delete_items = ['ctrl+d', 'delete', '']
+permanently_delete_items = ['D', '']
 # compress and extract
 extract_file = ['ctrl+e', '']
 compress_file = ['ctrl+a', '']
@@ -39,6 +41,8 @@ toggle_dot_file = ['.', '']
 change_panel_mode = ['v', '']
 open_help_menu = ['?', '']
 open_command_line = [':', '']
+open_spf_prompt = ['>', '']
+open_zoxide = ['z', '']
 copy_path = ['ctrl+p', '']
 copy_present_working_directory = ['c', '']
 toggle_footer = ['F', '']
