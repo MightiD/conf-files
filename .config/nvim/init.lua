@@ -14,6 +14,7 @@ vim.opt.smartcase = true
 vim.opt.ignorecase = true
 vim.opt.laststatus = 2
 vim.opt.statusline = "%f %m %= %y %l/%L Col %c"
+vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
 
