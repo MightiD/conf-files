@@ -69,6 +69,7 @@ vim.pack.add({
     { src = "https://github.com/henriklovhaug/Preview.nvim" },
     { src = "https://github.com/numToStr/Comment.nvim" },
     { src = "https://github.com/tpope/vim-fugitive" },
+    { src = "https://github.com/tpope/vim-surround" },
 })
 
 require("nvim-autopairs").setup()
@@ -104,6 +105,16 @@ vim.lsp.config["luals"] = {
         Lua = {
             workspace = {
                 library = vim.api.nvim_get_runtime_file("", true)
+            }
+        }
+    }
+}
+
+vim.lsp.config["pyright"] = {
+    settings = {
+        python = {
+            analysis = {
+                extraPaths = {"./"},
             }
         }
     }
