@@ -113,6 +113,8 @@ vim.lsp.config["luals"] = {
 vim.lsp.config["pyright"] = {
     settings = {
         python = {
+            venvPath = ".",
+            venv = ".venv",
             analysis = {
                 extraPaths = {"./"},
             }
