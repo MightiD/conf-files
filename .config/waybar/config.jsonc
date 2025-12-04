@@ -14,7 +14,7 @@
     ],
     "modules-right": [
 //        "custom/macro-kbd",
-	"custom/music",
+	// "custom/music",
         "pulseaudio",
         "network",
 //        "cpu",
@@ -28,12 +28,7 @@
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
-        "format": "{name}:{icon}",
-        "format-icons": {
-            "urgent": "",
-            "active": "",
-            "default": ""
-        }
+        "format": "{name}"
     },
     "clock": {
         // "timezone": "America/New_York",
@@ -84,10 +79,12 @@
     "network": {
         // "interface": "wlp2*"
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": " {ipaddr}/{cidr} ",
+        // "format-ethernet": " {ipaddr}/{cidr} ",
+        "format-ethernet": "",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠"
+        "format-disconnected": "Disconnected ⚠",
+        "on-click": "nm-connection-editor",
 //        "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
