@@ -18,6 +18,7 @@
     ],
 
     "hyprland/workspaces": {
+        "justify": "center",
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
@@ -25,48 +26,54 @@
     },
 
     "clock": {
+        "justify": "center",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
 
     "battery": {
+        "justify": "center",
         "states": {
             // "good": 95,
             "warning": 30,
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        "format-plugged": "{capacity}% ",
-        "format-icons": ["", "", "", "", ""]
+        "format-plugged": "{capacity}% \uf1e6",
+        "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"]
     },
 
     "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip": false,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
+        "justify": "center",
+        "format": "{icon}",
+        "tooltip": false,
+        "format-icons": {
+        "default": "\udb85\udc0b",
+        "performance": "\udb85\udc0b",
+        "balanced": "\uf24e",
+        "power-saver": "\udb80\udf2a"
       }
     },
 
     "network": {
-        "format-wifi": "{essid} ",
-        "format-ethernet": "",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+        "justify": "center",
+        "format-wifi": "{essid} \uf1eb",
+        "format-ethernet": "\uef44",
+        "format-linked": "{ifname} (No IP) \uef44",
+        "format-disconnected": "Disconnected \uf071",
         "on-click": "nm-connection-editor",
         "tooltip": false,
     },
 
     "pulseaudio": {
+        "justify": "center",
         "scroll-step": 1,
-        "format": "{volume}% {icon}",
-        "format-muted": " {format_source}",
-        "format-icons": {
-            "default": ["", "", ""]
-        },
+        "format": "{volume}% \uf028",
+        // "format-muted": "\ueee8{format_source}",
+        "format-muted": "\ueee8",
+        // "format-icons": {
+        //     "default": ["\uf026", "\uf027", "\uf028"]
+        // },
         "on-click": "pavucontrol"
     },
 }
