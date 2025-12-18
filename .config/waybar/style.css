@@ -4,7 +4,6 @@
     min-height: 0;
     font-family: "JetBrainsMono Nerd Font";
     font-size: 13px;
-    margin: 1px 0px;
 }
 
 window#waybar {
@@ -21,6 +20,7 @@ window#waybar.hidden {
     min-width: 0;
     padding: 0px 4px;
     color: #cdd6f4;
+    margin: 1px 0px;
 }
 
 #workspaces button.active {
@@ -44,6 +44,21 @@ window#waybar.hidden {
 #tray {
     padding: 0px 4px;
     color: #cdd6f4;
+    margin: 1px 3px;
+}
+
+#memory,
+#power-profiles-daemon,
+#battery,
+#cpu,
+#pulseaudio,
+#network,
+#custom-macro-kbd,
+#temperature,
+#custom-music,
+#tray {
+    /* border-right: 1px solid rgba(84, 99, 119, 0.3); */
+    padding-right: 5px;
 }
 
 #battery.charging {

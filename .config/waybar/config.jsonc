@@ -1,11 +1,8 @@
 // -*- mode: jsonc -*-
 {
     // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-//    "height": 30, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 1, // Gaps between modules (4px)
-    // Choose the order of the modules
+    "spacing": 1,
+
     "modules-left": [
         "hyprland/workspaces"
     ],
@@ -13,43 +10,25 @@
         "hyprland/window"
     ],
     "modules-right": [
-//        "custom/macro-kbd",
-	// "custom/music",
         "pulseaudio",
         "network",
-//        "cpu",
-//        "memory",
-//        "temperature",
         "battery",
         "power-profiles-daemon",
         "clock"
     ],
+
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
         "format": "{name}"
     },
+
     "clock": {
-        // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
-    "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
-    },
-    "memory": {
-        "format": "{}% "
-    },
-    "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 75,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
-    },
+
     "battery": {
         "states": {
             // "good": 95,
@@ -57,17 +36,12 @@
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
+
     "power-profiles-daemon": {
       "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
       "tooltip": false,
       "format-icons": {
         "default": "",
@@ -76,48 +50,22 @@
         "power-saver": ""
       }
     },
+
     "network": {
-        // "interface": "wlp2*"
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        // "format-ethernet": " {ipaddr}/{cidr} ",
-        "format-ethernet": "",
-        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-wifi": "{essid} ",
+        "format-ethernet": "",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "on-click": "nm-connection-editor",
-//        "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
+
     "pulseaudio": {
         "scroll-step": 1,
         "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
     },
-    "custom/macro-kbd": {
-        "exec": "cat $HOME/Programming/PYTHON/MacroKeyboard/conf.json | jq '.currentLayer'",
-	"tooltip": false,
-        "format": "{text} {icon}",
-        "signal": 8,
-        "format-icons": {
-            "default": " "
-        }
-    },
-    "custom/music": {
-	"format": "{}",
-	"return-type": "json",
-	"exec": "~/.local/bin/waybar-module-music --format \"%icon% %title% | %artist%\" --marquee -d 2000 --title-width 15 --artist-width 15 --effect-speed 175 --play-icon \"▶\" --pause-icon \"⏸\"",
-    }
 }
