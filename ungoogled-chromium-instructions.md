@@ -42,3 +42,20 @@ sudo chmod +x chromium
 # check if working
 chromium --version
 ```
+
+## Setting as default app browser and for PDF
+Set:
+```sh
+xdg-settings set default-web-browser chromium.desktop
+xdg-mime default chromium.desktop x-scheme-handler/http
+xdg-mime default chromium.desktop x-scheme-handler/https
+xdg-mime default chromium.desktop application/pdf
+```
+\
+Verify:
+```sh
+xdg-settings get default-web-browser
+xdg-mime query default x-scheme-handler/http
+xdg-mime query default x-scheme-handler/https
+xdg-mime query default application/pdf
+```
