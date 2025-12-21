@@ -25,6 +25,10 @@
         "format": "{name}"
     },
 
+    "hyprland/window": {
+        "tooltip": false,
+    },
+
     "clock": {
         "justify": "center",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
