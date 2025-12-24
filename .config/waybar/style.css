@@ -19,12 +19,12 @@ window#waybar.hidden {
     all: initial;
     min-width: 0;
     padding: 0px 4px;
-    color: #cdd6f4;
+    color: #8ea7ce;
     margin: 1px 0px;
 }
 
 #workspaces button.active {
-    color: #8ea7ce;
+    color: #cdd6f4;
 }
 
 #workspaces button.urgent {
