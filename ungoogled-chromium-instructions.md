@@ -59,3 +59,7 @@ xdg-mime query default x-scheme-handler/http
 xdg-mime query default x-scheme-handler/https
 xdg-mime query default application/pdf
 ```
+
+## Web RTC fix:
+Go to `chrome://flags/#webrtc-ip-handling-policy`  
+Set from `Disable non proxied udp` to `Default`
