@@ -2,7 +2,7 @@ import os
 
 pwd = os.getcwd()
 
-ignore = [".git", "setup.py", "setup.sh", "deps", "templates"]
+ignore = [".git", "setup.py", "setup.sh", "deps", "templates", "README.md", "ungoogled-chromium-instructions.md", "dolphin-fix.md"]
 
 def main():
     for (root,dirs,files) in os.walk("./", topdown=True):
