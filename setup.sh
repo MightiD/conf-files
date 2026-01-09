@@ -36,21 +36,21 @@ sudo systemctl enable sshd
 sudo systemctl start sshd
 
 
-# MINEGRUB THEME
-echo CONFIGURING GRUB THEME
-
-git clone https://github.com/Lxtharia/minegrub-theme.git
-cd minegrub-theme
-
-cp "./background_options/1.18 - [Caves And Cliffs 2].png" ./minegrub/backgrounds/
-sudo cp -ruv ./minegrub /boot/grub/themes/
-sudo echo "GRUB_THEME=/boot/grub/themes/minegrub/theme.txt" | sudo tee -a /etc/default/grub
-sudo grub-mkconfig -o /boot/grub/grub.cfg
-sudo mkdir -p /etc/pacman.d/hooks
-sudo cp ./templates/minegrub.hook /etc/pacman.d/hooks/minegrub.hook
-
-cd ..
-rm -rf minegrub-theme
+# # MINEGRUB THEME
+# echo CONFIGURING GRUB THEME
+#
+# git clone https://github.com/Lxtharia/minegrub-theme.git
+# cd minegrub-theme
+#
+# cp "./background_options/1.18 - [Caves And Cliffs 2].png" ./minegrub/backgrounds/
+# sudo cp -ruv ./minegrub /boot/grub/themes/
+# sudo echo "GRUB_THEME=/boot/grub/themes/minegrub/theme.txt" | sudo tee -a /etc/default/grub
+# sudo grub-mkconfig -o /boot/grub/grub.cfg
+# sudo mkdir -p /etc/pacman.d/hooks
+# sudo cp ./templates/minegrub.hook /etc/pacman.d/hooks/minegrub.hook
+#
+# cd ..
+# rm -rf minegrub-theme
 
 
 # HYPRLAND-SCROLLING
