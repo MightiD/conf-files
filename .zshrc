@@ -1,3 +1,4 @@
+fpath=($HOME/completion_zsh $fpath)
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
 
 export ZSH="$HOME/.oh-my-zsh"
@@ -8,6 +9,7 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 ENABLE_CORRECTION="true"
 setopt HIST_IGNORE_SPACE
+setopt complete_aliases
 
 HIST_STAMPS="yyyy-mm-dd"
 
@@ -52,3 +54,4 @@ bgcmd() {
 
 export EDITOR=nvim
 
+compdef _eza ls
