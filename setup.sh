@@ -9,7 +9,7 @@ sudo pacman -Syy
 
 echo "INSTALLING NECESSARY PACKAGES"
 
-sudo pacman -S hyprland hypridle hyprlock hyprshot wf-recorder swww waybar kitty dolphin wofi flatpak swaync pkgconf openssl inetutils samba eza power-profiles-daemon python-pillow ttf-firacode-nerd ttf-font-awesome ttf-jetbrains-mono noto-fonts noto-fonts-emoji pulseaudio pulseaudio-alsa pulseaudio-bluetooth pavucontrol breeze breeze-gtk xdg-desktop-portal-gtk nwg-look ttf-hack kvantum breeze-icons breeze5 libreoffice-still openssh qt5ct qt6ct gnome-tweaks base-devel git
+sudo pacman -S hyprland hypridle hyprlock hyprshot wf-recorder swww waybar kitty dolphin wofi flatpak swaync pkgconf openssl inetutils samba eza power-profiles-daemon python-pillow ttf-firacode-nerd ttf-font-awesome ttf-jetbrains-mono noto-fonts noto-fonts-emoji pulseaudio pulseaudio-alsa pulseaudio-bluetooth pavucontrol breeze breeze-gtk xdg-desktop-portal-gtk nwg-look ttf-hack kvantum breeze-icons breeze5 libreoffice-still openssh qt5ct qt6ct gnome-tweaks base-devel git breeze-gtk fuzzel
 
 
 # YAY
@@ -79,3 +79,11 @@ python setup.py
 # ZSH PLUGINS
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+
+#themes
+# in gtk3.0/settings.ini, theme=Breeze-Dark
+# in gtk4.0/settings.ini, gtk-application-prefer-dark-theme=1
+# systemctl --user import-environment GTK_THEME GTK_APPLICATION_PREFER_DARK_THEME
+#
+# yay -S qt6ct-kde

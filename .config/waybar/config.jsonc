@@ -1,18 +1,18 @@
-// -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
+    "layer": "top", // Waybar at top layer
     "spacing": 1,
 
     "modules-left": [
         "hyprland/workspaces"
     ],
+
     "modules-center": [
         "hyprland/window"
     ],
+
     "modules-right": [
+        "tray",
         "pulseaudio",
-        "network",
-        "battery",
         "power-profiles-daemon",
         "clock"
     ],
@@ -35,18 +35,6 @@
         "format-alt": "{:%Y-%m-%d}"
     },
 
-    "battery": {
-        "justify": "center",
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-plugged": "{capacity}% \uf1e6",
-        "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"]
-    },
-
     "power-profiles-daemon": {
         "justify": "center",
         "format": "{icon}",
@@ -59,25 +47,11 @@
       }
     },
 
-    "network": {
-        "justify": "center",
-        "format-wifi": "{essid} \uf1eb",
-        "format-ethernet": "\uef44",
-        "format-linked": "{ifname} (No IP) \uef44",
-        "format-disconnected": "Disconnected \uf071",
-        "on-click": "nm-connection-editor",
-        "tooltip": false,
-    },
-
     "pulseaudio": {
         "justify": "center",
         "scroll-step": 1,
         "format": "{volume}% \uf028",
-        // "format-muted": "\ueee8{format_source}",
         "format-muted": "\ueee8",
-        // "format-icons": {
-        //     "default": ["\uf026", "\uf027", "\uf028"]
-        // },
         "on-click": "pavucontrol"
     },
 }

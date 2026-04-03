@@ -2,8 +2,8 @@
     border: none;
     border-radius: 0;
     min-height: 0;
-    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font Mono";
-    font-size: 13px;
+    font-family: "Firacode Nerd Font", "Symbols Nerd Font Mono";
+    font-size: 12px;
 }
 
 window#waybar {
@@ -31,43 +31,19 @@ window#waybar.hidden {
     color: #f38ba8;
 }
 
-#memory,
 #power-profiles-daemon,
-#battery,
-#cpu,
 #pulseaudio,
-#network,
 #clock,
-#custom-macro-kbd,
-#temperature,
-#custom-music,
 #tray {
     padding: 0px 4px;
     color: #cdd6f4;
     margin: 1px 3px;
 }
 
-#memory,
 #power-profiles-daemon,
-#battery,
-#cpu,
 #pulseaudio,
-#network,
-#custom-macro-kbd,
-#temperature,
-#custom-music,
 #tray {
     border-right: 1px solid rgba(84, 99, 119, 0.3);
-}
-
-#battery.plugged,
-#battery.charging {
-    padding-right: 10px;
-}
-
-#battery {
-    padding-right: 12px;
-    padding-left: 0px;
 }
 
 #window {
@@ -76,11 +52,7 @@ window#waybar.hidden {
 
 #pulseaudio {
     padding-right: 12px;
-}
-
-#network {
-    padding-right: 11px;
-    padding-left: 2px;
+    padding-left: 0px;
 }
 
 #power-profiles-daemon.power-saver {
@@ -98,8 +70,13 @@ window#waybar.hidden {
     padding-left: 4px;
 }
 
+#tray {
+    padding-right: 5px;
+}
+
 tooltip {
     margin: 0px 0px;
+    padding: 0px 0px;
 }
 
 tooltip label {
