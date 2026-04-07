@@ -9,7 +9,7 @@ sudo pacman -Syy
 
 echo "INSTALLING NECESSARY PACKAGES"
 
-sudo pacman -S hyprland hypridle hyprlock hyprshot wf-recorder swww waybar kitty dolphin wofi flatpak swaync pkgconf openssl inetutils samba eza power-profiles-daemon python-pillow ttf-firacode-nerd ttf-font-awesome ttf-jetbrains-mono noto-fonts noto-fonts-emoji pulseaudio pulseaudio-alsa pulseaudio-bluetooth pavucontrol breeze breeze-gtk xdg-desktop-portal-gtk nwg-look ttf-hack kvantum breeze-icons breeze5 libreoffice-still openssh qt5ct qt6ct gnome-tweaks base-devel git breeze-gtk fuzzel
+sudo pacman -S hyprland hypridle hyprlock hyprshot wf-recorder swww waybar kitty dolphin wofi flatpak swaync pkgconf openssl inetutils samba eza power-profiles-daemon python-pillow ttf-firacode-nerd ttf-font-awesome ttf-jetbrains-mono noto-fonts noto-fonts-emoji pulseaudio pulseaudio-alsa pulseaudio-bluetooth pavucontrol breeze breeze-gtk xdg-desktop-portal-gtk nwg-look ttf-hack kvantum breeze-icons breeze5 libreoffice-still openssh qt5ct qt6ct gnome-tweaks base-devel git breeze-gtk fuzzel xorg-xrdb
 
 
 # YAY
@@ -87,3 +87,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 # systemctl --user import-environment GTK_THEME GTK_APPLICATION_PREFER_DARK_THEME
 #
 # yay -S qt6ct-kde
+#
+#
+# NSXIV
+# cp .Xresources ~/.Xresources
+# xrdb ~/.Xresources
