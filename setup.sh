@@ -9,7 +9,7 @@ sudo pacman -Syy
 
 echo "INSTALLING NECESSARY PACKAGES"
 
-sudo pacman -S hyprland hypridle hyprlock hyprshot wf-recorder swww waybar kitty dolphin wofi flatpak swaync pkgconf openssl inetutils samba eza power-profiles-daemon python-pillow ttf-firacode-nerd ttf-font-awesome ttf-jetbrains-mono noto-fonts noto-fonts-emoji pulseaudio pulseaudio-alsa pulseaudio-bluetooth pavucontrol breeze breeze-gtk xdg-desktop-portal-gtk nwg-look ttf-hack kvantum breeze-icons breeze5 libreoffice-still openssh qt5ct qt6ct gnome-tweaks base-devel git breeze-gtk fuzzel xorg-xrdb
+sudo pacman -S hyprland hypridle hyprlock hyprshot wf-recorder swww waybar kitty dolphin wofi flatpak swaync pkgconf openssl inetutils samba eza power-profiles-daemon python-pillow ttf-firacode-nerd ttf-font-awesome ttf-jetbrains-mono noto-fonts noto-fonts-emoji pulseaudio pulseaudio-alsa pulseaudio-bluetooth pavucontrol breeze breeze-gtk xdg-desktop-portal-gtk nwg-look ttf-hack kvantum breeze-icons breeze5 libreoffice-still openssh qt5ct qt6ct gnome-tweaks base-devel git breeze-gtk fuzzel xorg-xrdb cpio
 
 
 # YAY
@@ -54,13 +54,9 @@ sudo systemctl start sshd
 
 
 # HYPRLAND-SCROLLING
-echo HYPRLAND SCROLLING
-git clone https://github.com/mightid/hyprland-scrolling.git
-cd hyprland-scrolling
-cargo build --release
-cp target/release/hyprland-scrolling ~/.local/bin
-cd ..
-rm -rf hyprland-scrolling
+hyprpm update
+hyprpm add https://github.com/shezdy/hyprsplit
+hyprpm enable hyprsplit
 
 
 # FONTS
