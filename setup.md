@@ -83,6 +83,12 @@ For QT use `qt6ct-kde` from the AUR
 xrdb ~/.Xresources
 ```
 
+### Dotfiles
+```sh
+stow */        # for everything
+stow {package} # for a specific package
+```
+
 ### Ungoogled-chromium:
 Download the chrome `.deb` image from [here](https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb)
 ```sh
