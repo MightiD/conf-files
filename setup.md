@@ -37,7 +37,6 @@ waybar-module-music
 ungoogled-chromium-bin
 ```
 
-
 ### AUR Installation:
 ```sh
 mkdir gitClones
@@ -45,6 +44,14 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 ```
+
+### Pacman Configurations:
+In `/etc/pacman.conf`under `[options]` add:
+```
+Color
+ILoveCandy
+```
+and uncommend the `[multilib]` repository
 
 ### Rust:
 ```sh
@@ -83,7 +90,7 @@ For QT use `qt6ct-kde` from the AUR
 xrdb ~/.Xresources
 ```
 
-### Dotfiles
+### Dotfiles:
 ```sh
 stow */        # for everything
 stow {package} # for a specific package
@@ -118,3 +125,25 @@ xdg-mime query default application/pdf
 #### Web RTC fix:
 Go to `chrome://flags/#webrtc-ip-handling-policy`  
 Set from `Disable non proxied udp` to `Default`
+
+
+### Windows Boot Entry:
+The windows partition UUID can be found with `lsblk -f`
+`/etc/grub.d/40_custom`
+```
+#!/bin/sh
+exec tail -n +3 $0
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+
+menuentry "Windows" {
+    insmod part_gpt
+    insmod fat
+    insmod search_fs_uuid
+    insmod chain
+
+    search --fs-uuid --no-floppy --set=root {WINDOWS PART UUID}
+    chainloader (${root})/EFI/Microsoft/Boot/bootmgfw.efi
+}
+```
