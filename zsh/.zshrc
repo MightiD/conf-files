@@ -36,15 +36,6 @@ alias tl="tmux list-sessions"
 alias ta="tmux attach-session"
 alias uefi="systemctl reboot --firmware-setup"
 
-#scripts
-alias sn="~/scripts/serialNumber.sh"
-alias doughnut="python ~/scripts/doughnut.py"
-alias wifi="~/scripts/wifi.sh"
-alias vpn="~/scripts/vpn.sh"
-alias audio="~/scripts/audioModes.sh"
-alias bat="~/scripts/battery.sh"
-alias get_esprs='. $HOME/export-esp.sh'
-
 open() {
     nohup xdg-open "$@" > /dev/null 2>&1 &
 }
