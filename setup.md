@@ -14,7 +14,7 @@ waybar wofi fuzzel swaync
 
 cups cups-pdf ghostscript
 
-kitty nvim tmux eza
+kitty nvim tmux eza stow
 
 dolphin superfile nsxiv mpv wf-recorder
 
