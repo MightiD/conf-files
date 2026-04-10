@@ -4,7 +4,7 @@
 ```sh
 linux linux-headers linux-firmware base-devel git openssl pkgconf cpio sof-firmware
 
-efibootmgr grub dosfstools ntfs-3g dimdecode tree man-db man-pages arch-install-scripts
+efibootmgr grub dosfstools ntfs-3g dimdecode tree man-db man-pages arch-install-scripts cronie reflector
 
 hyprland hypridle hyprlock hyprshot xdg-desktop-portal-hyprland qt5-wayland qt6-wayland ly
 
@@ -53,6 +53,11 @@ ILoveCandy
 ```
 and uncommend the `[multilib]` repository
 
+### Mirrorlist:
+```sh
+sudo reflector --verbose --country GB --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+```
+
 ### Rust:
 ```sh
 curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
@@ -71,7 +76,12 @@ hyprpm add https://github.com/shezdy/hyprsplit
 hyprpm enable hyprsplit
 ```
 
-### ZSH plugins:
+### ZSH:
+#### OhMyZsh:
+```sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+#### Plugins:
 ```sh
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
