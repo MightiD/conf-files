@@ -30,7 +30,7 @@ alias win="sudo grub-reboot Windows && reboot"
 alias venv="python -m venv venv && source ./venv/bin/activate"
 alias ip="ip -c"
 alias vim="nvim"
-alias gary="curl -s https://api.garythe.cat/gary/image/ | kitty +kitten icat --scale-up=no"
+alias gary='curl -s https://api.garythe.cat/gary/image/ | kitty +kitten icat --scale-up --place "${COLUMNS}x${LINES}@0x0"'
 alias tn="tmux new-session -s"
 alias tl="tmux list-sessions"
 alias ta="tmux attach-session"
