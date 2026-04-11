@@ -4,7 +4,7 @@
 ```sh
 linux linux-headers linux-firmware base-devel git openssl pkgconf cpio sof-firmware
 
-efibootmgr grub dosfstools ntfs-3g dimdecode tree man-db man-pages arch-install-scripts cronie reflector
+efibootmgr grub dosfstools ntfs-3g dimdecode tree man-db man-pages arch-install-scripts cronie reflector less
 
 hyprland hypridle hyprlock hyprshot xdg-desktop-portal-hyprland qt5-wayland qt6-wayland ly
 
