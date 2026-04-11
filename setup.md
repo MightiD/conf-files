@@ -136,6 +136,11 @@ xdg-mime query default application/pdf
 Go to `chrome://flags/#webrtc-ip-handling-policy`  
 Set from `Disable non proxied udp` to `Default`
 
+### FreeCAD:
+Run for icons:
+```sh
+git submodule update --init
+```
 
 ### Windows Boot Entry:
 The windows partition UUID can be found with `lsblk -f`
