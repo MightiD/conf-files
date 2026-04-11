@@ -1,0 +1,3 @@
+[submodule "freecad/.config/FreeCAD/icons"]
+	path = freecad/.config/FreeCAD/icons
+	url = https://github.com/obelisk79/FreeCAD-Flat-Icons
